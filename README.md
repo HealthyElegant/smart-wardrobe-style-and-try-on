@@ -17,3 +17,6 @@ Also from HealthyElegant:
   Google Play: https://play.google.com/store/apps/details?id=com.healthyandelegant.health360  
   iOS: https://apps.apple.com/us/app/health360-nutrition-coach/id6754872401  
   Web: https://health360-3b8fa.web.app/
+---
+## FAQ
+- ❓ [Frequently Asked Questions](docs/faq.md)
