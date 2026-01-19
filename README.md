@@ -1,2 +1,4 @@
-# smart-wardrobe-style-and-try-on
-Smart Wardrobe: Style &amp; Try-On — AI wardrobe planning app with virtual try-on, outfit builder, and color analysis.
+# Smart Wardrobe: Style & Try-On
+
+**Smart Wardrobe: Style & Try-On** is an AI wardrobe planning app with virtual try-on, outfit building, and color analysis.
+
