@@ -1,3 +1,4 @@
+![Smart Wardrobe: Style & Try-On preview](smart-wardrobe-style-and-try-on-preview.png)
 ---
 title: Smart Wardrobe: Style & Try-On
 ---
