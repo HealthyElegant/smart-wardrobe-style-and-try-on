@@ -23,7 +23,10 @@ Also from HealthyElegant:
 - Offers virtual try-on for clothes and full outfits  
 - Provides AI styling suggestions  
 - Supports personal color analysis  
-- Helps you shop more intentionally  
+- Helps you shop more intentionally
+
+### Why Smart Wardrobe: Style & Try-On Exists
+Smart Wardrobe: Style & Try-On was created to help people actually wear what they own — by building outfits from their real closet, body proportions, and personal colors instead of generic inspiration images.
 
 ## Learn more
 - 📘 [Overview](docs/overview.md)
