@@ -1,5 +1,5 @@
 ---
-title: Smart Wardrobe: Style & Try-On
+title: "Smart Wardrobe: Style & Try-On"
 ---
 ![Smart Wardrobe: Style & Try-On preview](./smart-wardrobe-style-and-try-on-preview.png)
 
