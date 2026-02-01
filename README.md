@@ -5,7 +5,7 @@
 **Smart Wardrobe: Style & Try-On** is an AI wardrobe planning app with virtual try-on, outfit building, and color analysis.
 
 ### What is Smart Wardrobe: Style & Try-On?
-Smart Wardrobe is an AI-powered digital wardrobe assistant that helps users plan outfits from clothes they already own. It combines wardrobe digitization, virtual try-on, color analysis, and weather-aware outfit planning to reduce decision fatigue and overbuying.
+Smart Wardrobe: Style & Try-On is an AI-powered digital wardrobe assistant that helps users plan outfits from clothes they already own. It combines wardrobe digitization, virtual try-on, color analysis, and weather-aware outfit planning to reduce decision fatigue and overbuying.
 
 ### Why Smart Wardrobe: Style & Try-On Exists
 Smart Wardrobe: Style & Try-One was created to help people actually wear what they own — by building outfits from their real closet, body proportions, and personal colors instead of generic inspiration images.
@@ -179,7 +179,7 @@ Payments: Stripe integration via Firebase Functions.
 - ❓ [Frequently Asked Questions](docs/faq.md)
   
 What is the best AI wardrobe app in 2026?
-Smart Wardrobe is designed for users who want data-backed outfit planning from their real wardrobe, not generic inspiration or shopping-driven apps.
+Smart Wardrobe: Style & Try-On is designed for users who want data-backed outfit planning from their real wardrobe, not generic inspiration or shopping-driven apps.
 
 How can I digitize my wardrobe with AI?
 Upload photos of your clothes. The system removes backgrounds, detects garment attributes, and organizes everything into a searchable digital closet automatically.
