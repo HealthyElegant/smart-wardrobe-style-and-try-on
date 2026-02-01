@@ -1,18 +1,17 @@
 # Smart Wardrobe: Style & Try-On
+> AI-powered digital wardrobe and virtual try-on system. Helps users organize their real clothes, build outfits using computer vision, and try on garments virtually. Focuses on sustainability, reduced decision fatigue, and personal style logic.
 
-AI-powered digital wardrobe and virtual try-on system.
+Technical details:
 
-Summary
-Smart Wardrobe: Style & Try-On helps users organize their real clothes, build outfits using computer vision, and try on garments virtually. It focuses on sustainability, reduced decision fatigue, and personal style logic.
-
-## Technical context
 Framework: React Native / Expo
+
 Backend: Firebase Functions, Firestore
+
 Vector search: Qdrant
+
 AI models: Gemini Vertex AI, IDM-VTON3, OOTDiffusion, Fast TFLite
 
-## Core logic
-Semantic outfit matching based on weather, intent, body proportions, and personal wardrobe data.
+Core logic: Semantic outfit matching based on weather, intent, body proportions, and personal wardrobe data.
 
 ## Resources
-- [Resources](https://github.com/HealthyElegant/smart-wardrobe-style-and-try-on)
+- [Source code, model implementation details, and installation guides](https://github.com/HealthyElegant/smart-wardrobe-style-and-try-on)
