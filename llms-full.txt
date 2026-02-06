@@ -1,0 +1,258 @@
+Smart Wardrobe: Style & Try-On - Full App Function Map
+Generated: 2026-02-06
+
+Repository packages:
+- react-native/ (main React Native + Expo app)
+- functions/ (Firebase Cloud Functions backend)
+- vto-pipeline/ (FastAPI VTO pipeline server)
+- mcp-server/ (OAuth/MCP server)
+- app/ (native Android scaffold, mostly empty)
+
+App entry points:
+- react-native/App.tsx
+- react-native/index.js
+- react-native/index.web.tsx
+- react-native/src/navigation.tsx (RootStack + auth routing + deep-link handoff)
+
+Navigation routes (route -> component -> file):
+- Welcome -> WelcomeScreen -> react-native/src/screens/WelcomeScreen.tsx
+- Auth -> AuthScreen -> react-native/src/screens/AuthScreen.tsx
+- Onboarding -> OnboardingScreen -> react-native/src/screens/OnboardingScreen.tsx
+- OnboardingDetails -> OnboardingDetailsScreen -> react-native/src/screens/OnboardingDetailsScreen.tsx
+- OnboardingHelp -> OnboardingHelpScreen -> react-native/src/screens/OnboardingHelpScreen.tsx
+- Home -> HomeScreen -> react-native/src/screens/HomeScreen.tsx
+- Dashboard -> DashboardScreen -> react-native/src/screens/DashboardScreen.tsx
+- Wardrobe -> WardrobeScreen -> react-native/src/screens/WardrobeScreen.tsx
+- StyleAssistant -> StyleAssistantScreen -> react-native/src/screens/StyleAssistantScreen.tsx
+- MyAccount -> MyAccountScreen -> react-native/src/screens/MyAccountScreen.tsx
+- ResetPassword -> ResetPasswordScreen -> react-native/src/screens/ResetPasswordScreen.tsx
+- Subscription -> SubscriptionScreen -> react-native/src/screens/SubscriptionScreen.tsx
+- MyPreferences -> MyPreferencesScreen -> react-native/src/screens/MyPreferencesScreen.tsx
+- PrivacySettings -> PrivacySettingsScreen -> react-native/src/screens/PrivacySettingsScreen.tsx
+- ViewTutorial -> ViewTutorialScreen -> react-native/src/screens/ViewTutorialScreen.tsx
+- HelpImprove -> HelpImproveScreen -> react-native/src/screens/HelpImproveScreen.tsx
+- MyEmotionalCloset -> MyEmotionalClosetScreen -> react-native/src/screens/MyEmotionalClosetScreen.tsx
+- MyEnergyCloset -> MyEnergyClosetScreen -> react-native/src/screens/MyEnergyClosetScreen.tsx
+- EmotionClosetMatchmaker -> EmotionClosetMatchmakerScreen -> react-native/src/screens/EmotionClosetMatchmakerScreen.tsx
+- AI25Portrait -> AI25PortraitScreen -> react-native/src/screens/AI25PortraitScreen.tsx
+- AiMoodPortrait -> AiMoodPortraitScreen -> react-native/src/screens/AiMoodPortraitScreen.tsx
+- Shop -> ShopScreen -> react-native/src/screens/ShopScreen.tsx
+- PartnerBrandsRecommendations -> PartnerBrandsRecommendationsScreen -> react-native/src/screens/PartnerBrandsRecommendationsScreen.tsx
+- DopamineCloset -> DopamineClosetScreen -> react-native/src/screens/DopamineClosetScreen.tsx
+- BusinessCapsule -> BusinessCapsuleScreen -> react-native/src/screens/BusinessCapsuleScreen.tsx
+- EmotionalCapsules -> EmotionalCapsulesScreen -> react-native/src/screens/EmotionalCapsulesScreen.tsx
+- MoodCapsulesGallery -> MoodCapsulesGalleryScreen -> react-native/src/screens/MoodCapsulesGalleryScreen.tsx
+- Missions -> MissionsScreen -> react-native/src/screens/MissionsScreen.tsx
+- Progress -> ProgressScreen -> react-native/src/screens/ProgressScreen.tsx
+- MoodScoreProgress -> MoodScoreProgressScreen -> react-native/src/screens/MoodScoreProgressScreen.tsx
+- MoodTracker -> MoodTrackerScreen -> react-native/src/screens/MoodtrackerScreen.tsx
+- MoodTrackerHistory -> MoodTrackerHistoryScreen -> react-native/src/screens/MoodTrackerHistoryScreen.tsx
+- MoodGoals -> MoodGoalsScreen -> react-native/src/screens/MoodGoalsScreen.tsx
+- EmotionTrackerOverlay -> EmotionTrackerOverlayScreen -> react-native/src/screens/EmotionTrackerOverlayScreen.tsx
+- Lookbook -> LookbookScreen -> react-native/src/screens/LookbookScreen.tsx
+- WeeklyLookbook -> WeeklyLookbookScreen -> react-native/src/screens/WeeklyLookbookScreen.tsx
+- LookByAge -> LookByAgeScreen -> react-native/src/screens/LookByAgeScreen.tsx
+- LookSuggestion -> LookSuggestionScreen -> react-native/src/screens/LookSuggestionScreen.tsx
+- LookComposer -> LookComposerScreen -> react-native/src/screens/LookComposerScreen.tsx
+- CreativeCollageStudio -> CreativeCollageStudioScreen -> react-native/src/screens/CreativeCollageStudioScreen.tsx
+- Profile -> ProfileScreen -> react-native/src/screens/ProfileScreen.tsx
+- AIStylePsychotype -> AIStylePsychotypeScreen -> react-native/src/screens/AIStylePsychotypeScreen.tsx
+- StripeCheckout -> StripeCheckoutScreen -> react-native/src/screens/StripeCheckoutScreen.tsx
+- Outfits -> OutfitsScreen -> react-native/src/screens/OutfitsScreen.tsx
+- OutfitBuilder -> OutfitBuilderScreen -> react-native/src/screens/OutfitBuilderScreen.tsx
+- VirtualTryOn -> VirtualTryOnScreen -> react-native/src/screens/VirtualTryOnScreen.native.tsx, react-native/src/screens/VirtualTryOnScreen.web.tsx
+- LifeEvents -> LifeEventsScreen -> react-native/src/screens/LifeEventsScreen.tsx
+- EmotionBasedLookGenerator -> EmotionBasedLookGeneratorScreen -> react-native/src/screens/EmotionBasedLookGeneratorScreen.tsx
+- EmotionWardrobeSync -> EmotionWardrobeSyncScreen -> react-native/src/screens/EmotionWardrobeSyncScreen.tsx
+- AIAnalysis -> AIAnalysisScreen -> react-native/src/screens/AIAnalysisScreen.tsx
+- AIStylistChat -> AIStylistChatScreen -> react-native/src/screens/AIStylistChatScreen.tsx
+- AIPoweredReflectionSummary -> AIPoweredReflectionSummaryScreen -> react-native/src/screens/AIPoweredReflectionSummaryScreen.tsx
+- VoiceStylist -> VoiceStylistScreen -> react-native/src/screens/VoiceStylistScreen.tsx
+- VideoSalon -> VideoSalonScreen -> react-native/src/screens/VideoSalonScreen.tsx
+- GlowUpGenerator -> GlowUpGeneratorScreen -> react-native/src/screens/GlowUpGeneratorScreen.tsx
+- Trends -> TrendsScreen -> react-native/src/screens/TrendsScreen.tsx
+- TrendsVideos -> TrendsVideosScreen -> react-native/src/screens/TrendsVideosScreen.tsx
+- Referral -> ReferralScreen -> react-native/src/screens/ReferralScreen.tsx
+- Achievements -> AchievementsScreen -> react-native/src/screens/AchievementsScreen.tsx
+- AffirmationPlaylist -> AffirmationPlaylistScreen -> react-native/src/screens/AffirmationPlaylistScreen.tsx
+- HealingCloset -> HealingClosetScreen -> react-native/src/screens/HealingClosetScreen.tsx
+- GuidedTransformationPlan -> GuidedTransformationPlanScreen -> react-native/src/screens/GuidedTransformationPlanScreen.tsx
+- AffirmationBuilder -> AffirmationBuilderScreen -> react-native/src/screens/AffirmationBuilderScreen.tsx
+- EmotionalReminders -> EmotionalRemindersScreen -> react-native/src/screens/EmotionalRemindersScreen.tsx
+- EmotionalStyleStreaks -> EmotionalStyleStreaksScreen -> react-native/src/screens/EmotionalStyleStreaksScreen.tsx
+- AiEmotionalStylist24 -> AiEmotionalStylist24Screen -> react-native/src/screens/AiEmotionalStylist24Screen.tsx
+- AiStylistCoach -> AiStylistCoachScreen -> react-native/src/screens/AiStylistCoachScreen.tsx
+- AiTip -> AiTipScreen -> react-native/src/screens/AiTipScreen.tsx
+- AiPatternRecognition -> AiPatternRecognitionScreen -> react-native/src/screens/AiPatternRecognitionScreen.tsx
+- Pattern -> PatternScreen -> react-native/src/screens/PatternScreen.tsx
+- StylistAdviceRequest -> StylistAdviceRequestScreen -> react-native/src/screens/StylistAdviceRequestScreen.tsx
+- DailyEmotionForecast -> DailyEmotionForecastScreen -> react-native/src/screens/DailyEmotionForecastScreen.tsx
+- BeforeAfterEmotionalMap -> BeforeAfterEmotionalMapScreen -> react-native/src/screens/BeforeAfterEmotionalMapScreen.tsx
+- MyEmotionalWardrobeMap -> MyEmotionalWardrobeMapScreen -> react-native/src/screens/MyEmotionalWardrobeMapScreen.tsx
+- ArStories -> ArStoriesScreen -> react-native/src/screens/ArStoriesScreen.tsx
+- ArMoodMap -> ArMoodMapScreen -> react-native/src/screens/ArMoodMapScreen.tsx
+- ArSurpriseRewards -> ArSurpriseRewardsScreen -> react-native/src/screens/ArSurpriseRewardsScreen.tsx
+- ArAffirmationMirror -> ArAffirmationMirrorScreen -> react-native/src/screens/ArAffirmationMirrorScreen.tsx
+- ColorEmotionsDiary -> ColorEmotionsDiaryScreen -> react-native/src/screens/ColorEmotionsDiaryScreen.tsx
+- ColorCapsules -> ColorCapsulesScreen -> react-native/src/screens/ColorCapsulesScreen.tsx
+- ColorSignatureCreator -> ColorSignatureCreatorScreen -> react-native/src/screens/ColorSignatureCreatorScreen.tsx
+- MyColorPersonality -> MyColorPersonalityScreen -> react-native/src/screens/MyColorPersonalityScreen.tsx
+- MyMoodStyleManifesto -> MyMoodStyleManifestoScreen -> react-native/src/screens/MyMoodStyleManifestoScreen.tsx
+- MyMoodStyleBook -> MyMoodStyleBookScreen -> react-native/src/screens/MyMoodStyleBookScreen.tsx
+- MoodColorMatcher -> MoodColorMatcherScreen -> react-native/src/screens/MoodColorMatcherScreen.tsx
+- TodayColor -> TodayColorScreen -> react-native/src/screens/TodayColorScreen.tsx
+- LearningHub -> LearningHubScreen -> react-native/src/screens/LearningHubScreen.tsx
+- DailyChallenge -> DailyChallengeScreen -> react-native/src/screens/DailyChallengeScreen.tsx
+- NecklineEmotion -> NecklineEmotionScreen -> react-native/src/screens/NecklineEmotionScreen.tsx
+- CommentsSupport -> CommentsSupportScreen -> react-native/src/screens/CommentsSupportScreen.tsx
+- FriendReactions -> FriendReactionsScreen -> react-native/src/screens/FriendReactionsScreen.tsx
+- VoteMyLook -> VoteMyLookScreen -> react-native/src/screens/VoteMyLookScreen.tsx
+- MentorshipMode -> MentorshipModeScreen -> react-native/src/screens/MentorshipModeScreen.tsx
+- CommunityChallengesHub -> CommunityChallengesHubScreen -> react-native/src/screens/CommunityChallengesHubScreen.tsx
+- CommunityFeed -> CommunityFeedScreen -> react-native/src/screens/CommunityFeedScreen.tsx
+- MiniCoursesGuides -> MiniCoursesGuidesScreen -> react-native/src/screens/MiniCoursesGuidesScreen.tsx
+- MilestoneReflectionPortal -> MilestoneReflectionPortalScreen -> react-native/src/screens/MilestoneReflectionPortalScreen.tsx
+- WorkMode -> WorkModeScreen -> react-native/src/screens/WorkModeScreen.tsx
+- Dressfor -> DressforScreen -> react-native/src/screens/DressforScreen.tsx
+- VisionBoard -> VisionBoardScreen -> react-native/src/screens/VisionBoardScreen.tsx
+- VisionWall -> VisionWallScreen -> react-native/src/screens/VisionWallScreen.tsx
+- VisualMoodSignature -> VisualMoodSignatureScreen -> react-native/src/screens/VisualMoodSignatureScreen.tsx
+- VisualStyleDna -> VisualStyleDnaScreen -> react-native/src/screens/VisualStyleDnaScreen.tsx
+- RitualLibrary -> RitualLibraryScreen -> react-native/src/screens/RitualLibraryScreen.tsx
+- StyleRitualPlanner -> StyleRitualPlannerScreen -> react-native/src/screens/StyleRitualPlannerScreen.tsx
+- PsychologistInsights -> PsychologistInsightsScreen -> react-native/src/screens/PsychologistInsightsScreen.tsx
+- Psychology -> PsychologyScreen -> react-native/src/screens/PsychologyScreen.tsx
+- ColorTherapyPlanner -> ColorTherapyPlannerScreen -> react-native/src/screens/ColorTherapyPlannerScreen.tsx
+- MoodDrivenOutfitScheduler -> MoodDrivenOutfitSchedulerScreen -> react-native/src/screens/MoodDrivenOutfitSchedulerScreen.tsx
+- SmartOutfitPlanner -> SmartOutfitPlannerScreen -> react-native/src/screens/SmartOutfitPlannerScreen.tsx
+- StyleIntentionPlanner -> StyleIntentionPlannerScreen -> react-native/src/screens/StyleIntentionPlannerScreen.tsx
+- Planner -> PlannerScreen -> react-native/src/screens/PlannerScreen.tsx
+- LegacyLookCapsule -> LegacyLookCapsuleScreen -> react-native/src/screens/LegacyLookCapsuleScreen.tsx
+- Journal -> JournalScreen -> react-native/src/screens/JournalScreen.tsx
+- MoodJournal -> MoodJournalScreen -> react-native/src/screens/MoodJournalScreen.tsx
+- StyleMoodJournalReview -> StyleMoodJournalReviewScreen -> react-native/src/screens/StyleMoodJournalReviewScreen.tsx
+- ItemEnergyRating -> ItemEnergyRatingScreen -> react-native/src/screens/ItemEnergyRatingScreen.tsx
+- InspirationGrid -> InspirationGridScreen -> react-native/src/screens/InspirationGridScreen.tsx
+- ClosetTutorial -> ClosetTutorialScreen -> react-native/src/screens/ClosetTutorialScreen.tsx
+- PhotoTips -> PhotoTipsScreen -> react-native/src/screens/PhotoTipsScreen.tsx
+- TagOccasions -> TagOccasionsScreen -> react-native/src/screens/TagOccasionsScreen.tsx
+- OutfitDiary -> OutfitDiaryScreen -> react-native/src/screens/OutfitDiaryScreen.tsx
+- OutfitDiaryTutorial -> OutfitDiaryTutorialScreen -> react-native/src/screens/OutfitDiaryTutorialScreen.tsx
+- Saved -> SavedScreen -> react-native/src/screens/SavedScreen.tsx
+- Camera -> CameraScreen -> react-native/src/screens/CameraScreen.native.tsx, react-native/src/screens/CameraScreen.web.tsx
+- ImageGalleryTips -> ImageGalleryTipsScreen -> react-native/src/screens/ImageGalleryTipsScreen.tsx
+- WebSearchTips -> WebSearchTipsScreen -> react-native/src/screens/WebSearchTipsScreen.tsx
+- WebBrowser -> WebBrowserScreen -> react-native/src/screens/WebBrowserScreen.tsx, react-native/src/screens/WebBrowserScreen.web.tsx
+- ImageEditor -> ImageEditorScreen -> react-native/src/screens/ImageEditorScreen.native.tsx, react-native/src/screens/ImageEditorScreen.web.tsx
+- SelfieReview -> SelfieReviewScreen -> react-native/src/screens/SelfieReviewScreen.tsx
+- SelfieInstruction -> SelfieInstructionScreen -> react-native/src/screens/SelfieInstructionScreen.tsx
+- StyleOutfits -> StyleOutfitsScreen -> react-native/src/screens/StyleOutfitsScreen.tsx
+
+Screens present but not wired in navigation:
+- ArMoodGlowScreen -> react-native/src/screens/ArMoodGlowScreen.tsx
+- ArScreen -> react-native/src/screens/ArScreen.tsx
+- EmotionalGoalsDashboardScreen -> react-native/src/screens/EmotionalGoalsDashboardScreen.tsx
+- MyMoodLooksScreen -> react-native/src/screens/MyMoodLooksScreen.tsx
+- WardrobeTimelineScreen -> react-native/src/screens/WardrobeTimelineScreen.tsx
+
+Shared UI components:
+- react-native/src/components/AdBanner.native.tsx
+- react-native/src/components/AdBanner.web.tsx
+- react-native/src/components/BodyVisualizer3D.native.tsx
+- react-native/src/components/BodyVisualizer3D.web.tsx
+- react-native/src/components/BottomNavBar.tsx
+- react-native/src/components/BrandLogo.tsx
+- react-native/src/components/LotusLogo.tsx
+- react-native/src/components/MeasurementForm.tsx
+- react-native/src/components/PlatformPicker.native.tsx
+- react-native/src/components/PlatformPicker.tsx
+- react-native/src/components/PlatformPicker.web.tsx
+- react-native/src/components/PrivacyConsentModal.tsx
+- react-native/src/components/ProfileModal.tsx
+- react-native/src/components/ScreenWrapper.tsx
+- react-native/src/components/SmartUploadModal.tsx
+- react-native/src/components/TutorialOverlay.tsx
+
+Client exports (services/firebase/lib/utils):
+Section: Client services
+- react-native/src/services/affiliateService.ts :: convertShopItemToWardrobe, COSMETIC_AFFILIATES, getAffiliateLinkForPersona, getShopItemForCategory, getShopItemsForCategory, resolveAffiliateImageUrl
+- react-native/src/services/ai/aiService.ts :: AIService
+- react-native/src/services/ai/ImageEncoder.ts :: ImageEncoder
+- react-native/src/services/aiStylist.ts :: buildCuratedOutfitBlueprint, chatWithStylist, generateItemImage, getItemCombinations, getOutfitDescriptionFromItems, getOutfitOfTheDay, getStyleOutfitIdeas
+- react-native/src/services/capsuleBuilder.ts :: analyseCapsule, buildCapsulePlan, listOccasions, listPersonas
+- react-native/src/services/colorAnalyzer.ts :: analyzeImage
+- react-native/src/services/garmentKnowledge.ts :: buildPatternSummary, getGarmentConstructionSteps
+- react-native/src/services/globalItemTags.ts :: loadGlobalItemTags, mergeGlobalItemTags, setGlobalItemTags
+- react-native/src/services/handoff.ts :: consumePendingHandoffCode, getHandoffCodeFromUrl, getLastHandoffPayload, redeemHandoffCode, saveHandoffPayload, storePendingHandoffCode
+- react-native/src/services/imageClassifier.native.ts :: classifyImage, classifyImageWithDetails, loadModel
+- react-native/src/services/imageClassifier.web.ts :: classifyImage, classifyImageWithDetails, loadModel
+- react-native/src/services/imageService.ts :: extractImageMetadata, getColorName
+- react-native/src/services/learningHub.ts :: ensureLessonProgress, getLearningTopics, loadLearningProgress, saveLearningProgress
+- react-native/src/services/learningReminders.native.ts :: syncLearningReminders
+- react-native/src/services/learningReminders.web.ts :: syncLearningReminders
+- react-native/src/services/OutfitScorer.native.ts :: initModel, scoreOutfit
+- react-native/src/services/OutfitScorer.web.ts :: initModel, scoreOutfit
+- react-native/src/services/patternGenerator.ts :: generatePattern
+- react-native/src/services/preferences.ts :: buildItemMetadataFromProfile, getStyleProfile, saveStyleProfile
+- react-native/src/services/recommendationService.ts :: generateOutfitForGoal, generateOutfitForMood, generateSuggestedLook, MOODS
+- react-native/src/services/selfieReminders.native.ts :: cancelAllSelfieReminders, getSelfieReminderTime, requestNotificationPermissions, scheduleDailySelfieReminder
+- react-native/src/services/selfieReminders.web.ts :: cancelAllSelfieReminders, getSelfieReminderTime, requestNotificationPermissions, scheduleDailySelfieReminder
+- react-native/src/services/shoppingRecommendations.ts :: inferCategory, suggestionsFromCapsuleSlots, suggestionsFromDetox, suggestionsFromTravelItems
+- react-native/src/services/shoppingState.ts :: applyShoppingAction, loadShoppingState, persistShoppingState, reduceShoppingState
+- react-native/src/services/stripeService.ts :: createStripeCheckoutSession, createStripeSubscription, getTryOnStatus, recordTryOnUsage
+- react-native/src/services/styleAdvisor.ts :: getStyleRecommendation
+- react-native/src/services/styleRecommendations.ts :: buildStyleRecommendations
+- react-native/src/services/subscriptionService.ts :: getTryOnUsage, getUserPlan
+- react-native/src/services/sustainabilityService.ts :: calculateMetrics
+- react-native/src/services/tagOwnership.ts :: loadGlobalTagOwners, loadUserTagOwners, setGlobalTagOwner, setUserTagOwner
+- react-native/src/services/travelPacker.ts :: buildTravelPackingPlan
+- react-native/src/services/vtoService.ts :: pollVTOStatus, startVirtualTryOn, startVirtualTryOnFull, VTO_CAPS, VTO_CONFIG
+- react-native/src/services/wardrobeDetox.ts :: analyseWardrobeForDetox
+- react-native/src/services/wardrobeStorage.ts :: addCustomOccasion, deleteCustomOccasion, deleteOutfit, deleteWardrobeItem, getActiveMissions, getCustomOccasions, getFavoriteOutfits, getNextWardrobeId, getSavedOutfits, getWardrobeItems, markItemAsWorn, removeMission, saveOutfit, setWardrobeItems, startMission, updateCustomOccasion, updateOutfitFavorite, updateOutfitItems, upsertWardrobeItem
+Section: Firebase client
+- react-native/src/firebase/auth.native.ts :: onAuthChange, registerEmail, signInApple, signInEmail, signInGoogle, signOutUser
+- react-native/src/firebase/auth.web.ts :: onAuthChange, registerEmail, signInApple, signInEmail, signInGoogle, signOutUser
+- react-native/src/firebase/functions.native.ts :: removeBackground
+- react-native/src/firebase/functions.web.ts :: removeBackground
+- react-native/src/firebase/userProfile.ts :: getUserOnboarded, getUserProfile, isUserProfileComplete, saveOnboarding, updateUserProfile
+Section: Client libs
+- react-native/src/lib/firebase.ts :: app, auth, db
+- react-native/src/lib/stripe.native.tsx :: StripeProviderSafe, useStripeSafe
+- react-native/src/lib/stripe.web.tsx :: StripeProviderSafe, useStripeSafe
+Section: Client utils
+- react-native/src/utils/i18n.ts :: getLang, i18n, setLang
+- react-native/src/utils/imagePicker.native.ts :: pickImageViaCamera, pickImageViaFile, pickMultipleImagesViaFile
+- react-native/src/utils/imagePicker.ts :: (no exports detected)
+- react-native/src/utils/imagePicker.web.ts :: pickImageViaCamera, pickImageViaFile, pickMultipleImagesViaFile
+
+Backend - Firebase Cloud Functions (functions/index.js):
+- classifyClothingHttp
+- createStripeCheckoutSession
+- createStripeSubscription
+- getTryOnStatus
+- pollVTO
+- processVTO
+- processVTOFull
+- recordTryOnUsage
+- removeBg
+- removeBgHttp
+- segmentClothesV2
+- stripeWebhook
+
+Backend - VTO pipeline API (vto-pipeline/api_server.py):
+- POST /pollVTO
+- POST /processVTOFull
+
+Backend - MCP server routes (mcp-server/index.js):
+- GET /
+- GET /.well-known/oauth-authorization-server
+- GET /healthz
+- GET /oauth/authorize
+- POST /oauth/authorize/complete
+- POST /oauth/revoke
+- POST /oauth/token
+
+Notes:
+- This map lists exported symbols for client modules and public backend endpoints.
+- For per-file internal helpers, open the file directly.
+
